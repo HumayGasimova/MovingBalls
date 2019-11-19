@@ -9,3 +9,13 @@ Array [
   },
 ]
 `;
+
+exports[`movingBallsActions Dispatches the correct action and payload (moveCircleYCoordinate) 1`] = `
+Array [
+  Object {
+    "dy": 342,
+    "id": 2,
+    "type": "MOVE_CIRCLE_Y_COORDINATE",
+  },
+]
+`;

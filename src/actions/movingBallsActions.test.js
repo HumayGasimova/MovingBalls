@@ -36,4 +36,18 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (moveCircleYCoordinate)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
+                dy: 342,
+                id: 2
+            }
+        ];
+
+        store.dispatch(Actions.moveCircleYCoordinate(342, 2));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });
