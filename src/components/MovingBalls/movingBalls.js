@@ -25,7 +25,6 @@ import Button from '../../library/Button/button';
 */
 
 import './movingBalls.scss';
-import Nature from '../../images/76-760412_lake-clip-sunset-mountains-vector-png.png';
 
 /**
 * Selectors

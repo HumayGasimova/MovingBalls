@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movingBallsActions Dispatches the correct action and payload (moveCircleXCoordinate) 1`] = `
+Array [
+  Object {
+    "dx": 467,
+    "id": 3,
+    "type": "MOVE_CIRCLE_X_COORDINATE",
+  },
+]
+`;

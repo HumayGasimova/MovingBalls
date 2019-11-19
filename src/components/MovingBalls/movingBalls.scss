@@ -4,7 +4,13 @@
   left: 20px;
 }
 
-// img {//     opacity: 1;
-//     width: 200px;
-//     height: 100px;
-// }
+canvas {
+  background: white;
+}
+
+input {
+  padding-left: 4px;
+  border: 1px solid black;
+  width: 155px;
+  margin: 3px 3px 3px 0;
+}
