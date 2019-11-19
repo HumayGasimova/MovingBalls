@@ -47,3 +47,13 @@ Array [
   },
 ]
 `;
+
+exports[`movingBallsActions Dispatches the correct action and payload (updateVelocities) 1`] = `
+Array [
+  Object {
+    "dx": 3,
+    "dy": 6,
+    "type": "UPDATE_VELOCITIES",
+  },
+]
+`;

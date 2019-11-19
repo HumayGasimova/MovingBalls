@@ -90,4 +90,18 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (updateVelocities)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.UPDATE_VELOCITIES,
+                dx: 3,
+                dy: 6
+            }
+        ];
+
+        store.dispatch(Actions.updateVelocities(3, 6));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });
