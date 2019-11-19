@@ -46,6 +46,22 @@ Array [
 ]
 `;
 
+exports[`movingBallsActions Dispatches the correct action and payload (updateCirclesArray) 1`] = `
+Array [
+  Object {
+    "arr": Array [
+      Object {
+        "a": 6,
+      },
+      Object {
+        "b": 9,
+      },
+    ],
+    "type": "UPDATE_CIRCLES_ARRAY",
+  },
+]
+`;
+
 exports[`movingBallsActions Dispatches the correct action and payload (updateCoordinates) 1`] = `
 Array [
   Object {

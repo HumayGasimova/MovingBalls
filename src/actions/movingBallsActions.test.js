@@ -116,4 +116,17 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (updateCirclesArray)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.UPDATE_CIRCLES_ARRAY,
+                arr: [{a: 6},{b: 9}]
+            }
+        ];
+
+        store.dispatch(Actions.updateCirclesArray([{a: 6},{b: 9}]));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });
