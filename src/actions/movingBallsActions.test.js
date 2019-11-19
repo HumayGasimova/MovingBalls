@@ -50,4 +50,17 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (changeDirectionOfXMove)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.CHANGE_DIRECTION_OF_X_MOVE,
+                id: 7
+            }
+        ];
+
+        store.dispatch(Actions.changeDirectionOfXMove(7));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });
