@@ -9,6 +9,15 @@ Array [
 ]
 `;
 
+exports[`movingBallsActions Dispatches the correct action and payload (changeDirectionOfYMove) 1`] = `
+Array [
+  Object {
+    "id": 3,
+    "type": "CHANGE_DIRECTION_OF_Y_MOVE",
+  },
+]
+`;
+
 exports[`movingBallsActions Dispatches the correct action and payload (moveCircleXCoordinate) 1`] = `
 Array [
   Object {
@@ -25,6 +34,16 @@ Array [
     "dy": 342,
     "id": 2,
     "type": "MOVE_CIRCLE_Y_COORDINATE",
+  },
+]
+`;
+
+exports[`movingBallsActions Dispatches the correct action and payload (updateCoordinates) 1`] = `
+Array [
+  Object {
+    "type": "UPDATE_COORDINATES",
+    "x": 36,
+    "y": 67,
   },
 ]
 `;
