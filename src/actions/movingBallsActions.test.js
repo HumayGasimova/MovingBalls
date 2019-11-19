@@ -129,4 +129,17 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (getNumbersOfBalls)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.GET_NUMBERS_OF_BALLS,
+                num: 57
+            }
+        ];
+
+        store.dispatch(Actions.getNumbersOfBalls(57));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });

@@ -26,6 +26,15 @@ Array [
 ]
 `;
 
+exports[`movingBallsActions Dispatches the correct action and payload (getNumbersOfBalls) 1`] = `
+Array [
+  Object {
+    "num": 57,
+    "type": "GET_NUMBERS_OF_BALLS",
+  },
+]
+`;
+
 exports[`movingBallsActions Dispatches the correct action and payload (moveCircleXCoordinate) 1`] = `
 Array [
   Object {
