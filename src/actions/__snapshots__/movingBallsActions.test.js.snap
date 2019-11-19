@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`movingBallsActions Dispatches the correct action and payload (changeDirectionOfXMove) 1`] = `
+Array [
+  Object {
+    "id": 7,
+    "type": "CHANGE_DIRECTION_OF_X_MOVE",
+  },
+]
+`;
+
 exports[`movingBallsActions Dispatches the correct action and payload (moveCircleXCoordinate) 1`] = `
 Array [
   Object {

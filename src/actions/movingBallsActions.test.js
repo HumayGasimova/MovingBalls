@@ -63,4 +63,17 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toEqual(expectedActions);
         expect(store.getActions()).toMatchSnapshot();
     });
+
+    it('Dispatches the correct action and payload (changeDirectionOfYMove)', () => {
+        const expectedActions = [
+            {
+                type: actionTypes.CHANGE_DIRECTION_OF_Y_MOVE,
+                id: 3
+            }
+        ];
+
+        store.dispatch(Actions.changeDirectionOfYMove(3));
+        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions()).toMatchSnapshot();
+    });
 });
