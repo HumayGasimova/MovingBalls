@@ -8,7 +8,7 @@ import * as actionTypes from "../constants/actionTypes";
 * Reducer
 */
 
-import reducer from './businessReducer';
+import reducer from './movingBallsReducer';
 
 /**
 * Initial State
@@ -16,25 +16,31 @@ import reducer from './businessReducer';
 
 import { 
     initialState 
-} from './businessReducer'
+} from './movingBallsReducer'
 
 
-describe('businessReducer', () => {
+describe('movingBallsReducer', () => {
 
     it("should return the initial state", () => {
         const action = { type: "NONE" }
         expect(reducer(undefined, action)).toEqual(initialState);
     })
 
-    // it("should add 1 paperclips, add 1 to unsoldInventory and subtract 1 from wire", () => {
-    //     const action = { type: actionTypes.MAKE_PAPERCLIP }
-    //     const state = {
-    //         ...initialState, 
-    //         paperClips: 1, 
-    //         unsoldInventory: 1, 
-    //         wire: 999
-    //     }
-    //     expect(reducer(initialState, action)).toEqual(state);
-    // })
+    it("should update property x in circles array by adding the value passed through the action", () => {
+        const action = { 
+            type: actionTypes.MOVE_CIRCLE_X_COORDINATE,
+            dx: 4,
+            id: 3
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{id: 1, x: 2}, {id: 2, x: 1}, {id: 3, x: 1}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{id: 1, x: 2}, {id: 2, x: 1}, {id: 3, x: 5}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
 
 });

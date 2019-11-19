@@ -36,7 +36,7 @@ export const fillCirclesArrayEpic = (action$, state$) =>
     action$.pipe(
         ofType(actionTypes.FILL_CIRCLES_ARRAY),
             mergeMap(action => {
-                let arrayOfCircles = Utility.getArrayOfCircles(state$.value.canvas.numberOfBalls);
+                let arrayOfCircles = Utility.getArrayOfCircles(state$.value.movingBalls.numberOfBalls);
                 arrayOfCircles.map((el,i) => {
                     let radius = Utility.getRandomRadius();
                     arrayOfCircles[i] = {
@@ -55,6 +55,5 @@ export const fillCirclesArrayEpic = (action$, state$) =>
                 )
             })   
         ) 
-    
          
 export default fillCirclesArrayEpic;

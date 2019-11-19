@@ -77,34 +77,6 @@ describe('movingBallsActions', () => {
         expect(store.getActions()).toMatchSnapshot();
     });
 
-    it('Dispatches the correct action and payload (updateCoordinates)', () => {
-        const expectedActions = [
-            {
-                type: actionTypes.UPDATE_COORDINATES,
-                x: 36,
-                y: 67
-            }
-        ];
-
-        store.dispatch(Actions.updateCoordinates(36, 67));
-        expect(store.getActions()).toEqual(expectedActions);
-        expect(store.getActions()).toMatchSnapshot();
-    });
-
-    it('Dispatches the correct action and payload (updateVelocities)', () => {
-        const expectedActions = [
-            {
-                type: actionTypes.UPDATE_VELOCITIES,
-                dx: 3,
-                dy: 6
-            }
-        ];
-
-        store.dispatch(Actions.updateVelocities(3, 6));
-        expect(store.getActions()).toEqual(expectedActions);
-        expect(store.getActions()).toMatchSnapshot();
-    });
-
     it('Dispatches the correct action and payload (fillCirclesArray)', () => {
         const expectedActions = [
             {

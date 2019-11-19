@@ -30,22 +30,6 @@ export function changeDirectionOfYMove(id) {
     };
 };
 
-export function updateCoordinates(x, y) {
-    return { 
-        type: actionTypes.UPDATE_COORDINATES,
-        x: x,
-        y: y
-    };
-};
-
-export function updateVelocities(x, y) {
-    return { 
-        type: actionTypes.UPDATE_VELOCITIES,
-        dx: x,
-        dy: y
-    };
-};
-
 export function fillCirclesArray() {
     return { 
         type: actionTypes.FILL_CIRCLES_ARRAY

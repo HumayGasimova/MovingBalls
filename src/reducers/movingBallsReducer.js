@@ -64,20 +64,6 @@ const changeDirectionOfYMove = (state, action) => {
     });
 }
 
-const updateCoordinates = (state, action) => {
-    return updateObject(state, {
-        x: action.x,
-        y: action.y
-    });
-}
-
-const updateVelocities = (state, action) => {
-    return updateObject(state, {
-        dx: action.dx,
-        dy: action.dy
-    });
-}
-
 const updateCirclesArray = (state, action) => {
     return updateObject(state, {
         circles: action.arr
@@ -90,8 +76,6 @@ const getNumbersOfBalls = (state, action) => {
     });
 }
 
-
-
 const canvasReducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.MOVE_CIRCLE_X_COORDINATE:
@@ -102,10 +86,6 @@ const canvasReducer = (state = initialState, action) => {
             return changeDirectionOfXMove(state, action);
         case actionTypes.CHANGE_DIRECTION_OF_Y_MOVE:
             return changeDirectionOfYMove(state, action);
-        case actionTypes.UPDATE_COORDINATES:
-            return updateCoordinates(state, action);
-        case actionTypes.UPDATE_VELOCITIES:
-            return updateVelocities(state, action);
         case actionTypes.FILL_CIRCLES_ARRAY:
             return state;
         case actionTypes.UPDATE_CIRCLES_ARRAY:

@@ -3,8 +3,6 @@ export {
     moveCircleYCoordinate,
     changeDirectionOfXMove,
     changeDirectionOfYMove,
-    updateCoordinates,
-    updateVelocities,
     fillCirclesArray,
     updateCirclesArray,
     getNumbersOfBalls
