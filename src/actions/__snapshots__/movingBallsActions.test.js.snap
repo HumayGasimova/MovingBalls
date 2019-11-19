@@ -18,6 +18,14 @@ Array [
 ]
 `;
 
+exports[`movingBallsActions Dispatches the correct action and payload (fillCirclesArray) 1`] = `
+Array [
+  Object {
+    "type": "FILL_CIRCLES_ARRAY",
+  },
+]
+`;
+
 exports[`movingBallsActions Dispatches the correct action and payload (moveCircleXCoordinate) 1`] = `
 Array [
   Object {
