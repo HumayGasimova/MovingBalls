@@ -43,22 +43,22 @@ describe('movingBallsReducer', () => {
         expect(reducer(initState, action)).toEqual(state);
     });
 
-    // it("should update property x in circles array by adding the value passed through the action", () => {
-    //     const action = { 
-    //         type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
-    //         dy: -4,
-    //         id: 1
-    //     }
-    //     const initState = {
-    //         ...initialState, 
-    //         circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 10},{dy: 5, id: 2, y: 1}]
-    //     }
-    //     const state = {
-    //         ...initialState, 
-    //         circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 6},{dy: 5, id: 2, y: 1}]
-    //     }
-    //     expect(reducer(initState, action)).toEqual(state);
-    // });
+    it("should update property x in circles array by adding the value passed through the action", () => {
+        const action = { 
+            type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
+            dy: -4,
+            id: 1
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 10},{dy: 5, id: 2, y: 1}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 6},{dy: 5, id: 2, y: 1}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
 
     // it("should update numberOfBalls with the value passed through the action", () => {
     //     const action = { 
