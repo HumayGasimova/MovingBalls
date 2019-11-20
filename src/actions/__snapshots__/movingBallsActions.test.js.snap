@@ -70,23 +70,3 @@ Array [
   },
 ]
 `;
-
-exports[`movingBallsActions Dispatches the correct action and payload (updateCoordinates) 1`] = `
-Array [
-  Object {
-    "type": "UPDATE_COORDINATES",
-    "x": 36,
-    "y": 67,
-  },
-]
-`;
-
-exports[`movingBallsActions Dispatches the correct action and payload (updateVelocities) 1`] = `
-Array [
-  Object {
-    "dx": 3,
-    "dy": 6,
-    "type": "UPDATE_VELOCITIES",
-  },
-]
-`;
