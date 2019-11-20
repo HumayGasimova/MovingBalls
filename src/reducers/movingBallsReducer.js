@@ -24,8 +24,9 @@ export const initialState = {
 const moveCircleXCoordinate = (state, action) => {
     let updatedCircles = [...state.circles];
     let circle = updatedCircles.find(x => x.id === action.id);
-    circle.x = circle.x + action.dx;
-    updatedCircles.splice(action.id, 1 ,circle);
+    let selectedCircle = {...circle};
+    selectedCircle.x = selectedCircle.x + action.dx;
+    updatedCircles.splice(action.id, 1 ,selectedCircle);
     // updatedCircles[action.id] = circle
     return updateObject(state, {
         circles: updatedCircles
@@ -35,9 +36,9 @@ const moveCircleXCoordinate = (state, action) => {
 const moveCircleYCoordinate = (state, action) => {
     let updatedCircles = [...state.circles];
     let circle = updatedCircles.find(x => x.id === action.id);
-    circle.y = circle.y + action.dy;
-    updatedCircles.splice(action.id, 1 ,circle);
-
+    let selectedCircle = {...circle};
+    selectedCircle.y = selectedCircle.y + action.dy;
+    updatedCircles.splice(action.id, 1 ,selectedCircle);
     // console.log(updatedCircles)
     return updateObject(state, {
         circles: updatedCircles
