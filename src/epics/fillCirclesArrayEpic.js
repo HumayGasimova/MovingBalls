@@ -51,7 +51,7 @@ export const fillCirclesArrayEpic = (action$, state$) =>
                 })
                 console.log("RANDOM", arrayOfCircles)
                 return of(
-                        Actions.updateCirclesArray(arrayOfCircles)
+                    Actions.updateCirclesArray(arrayOfCircles)
                 )
             })   
         ) 

@@ -34,14 +34,63 @@ describe('movingBallsReducer', () => {
     //     }
     //     const initState = {
     //         ...initialState, 
-    //         circles: [{id: 3, x: 1, dx: 4}]
+    //         circles: [{dx: 4, id: 3, x: 1}]
     //     }
     //     const state = {
     //         ...initialState, 
-    //         circles: [{id: 3, x: 5, dx: 4}]
+    //         circles: [{dx: 4, id: 3, x: 1}]
     //     }
     //     expect(reducer(initState, action)).toEqual(state);
     // });
+
+    // it("should update property x in circles array by adding the value passed through the action", () => {
+    //     const action = { 
+    //         type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
+    //         dy: 3,
+    //         id: 1
+    //     }
+    //     const initState = {
+    //         ...initialState, 
+    //         circles: [{dy: 3, id: 1, y: 1}]
+    //     }
+    //     const state = {
+    //         ...initialState, 
+    //         circles: [{dy: 3, id: 1, y: 4}]
+    //     }
+    //     expect(reducer(initState, action)).toEqual(state);
+    // });
+
+    // it("should update numberOfBalls with the value passed through the action", () => {
+    //     const action = { 
+    //         type: actionTypes.CHANGE_DIRECTION_OF_X_MOVE,
+    //         id: 2
+    //     }
+    //     const initState = {
+    //         ...initialState, 
+    //         circles: [{dx: 3, id: 2, y: 1}]
+    //     }
+    //     const state = {
+    //         ...initialState, 
+    //         circles: [{dx: -3, id: 2, y: 1}]
+    //     }
+    //     expect(reducer(initState, action)).toEqual(state);
+    // });
+
+    it("should update circles array with the array passed through the action", () => {
+        const action = { 
+            type: actionTypes.UPDATE_CIRCLES_ARRAY,
+            arr: [{a: 3, b: 6}]
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{a: 6, b: 4}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{a: 3, b: 6}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
 
     it("should update numberOfBalls with the value passed through the action", () => {
         const action = { 
