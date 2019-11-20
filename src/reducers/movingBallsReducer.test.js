@@ -43,7 +43,7 @@ describe('movingBallsReducer', () => {
         expect(reducer(initState, action)).toEqual(state);
     });
 
-    it("should update property x in circles array by adding the value passed through the action", () => {
+    it("should update property y in circles array by adding the value passed through the action", () => {
         const action = { 
             type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
             dy: -4,
@@ -60,7 +60,7 @@ describe('movingBallsReducer', () => {
         expect(reducer(initState, action)).toEqual(state);
     });
 
-    it("should update numberOfBalls with the value passed through the action", () => {
+    it("should update dx property in circles array with the opposite value", () => {
         const action = { 
             type: actionTypes.CHANGE_DIRECTION_OF_X_MOVE,
             id: 0
@@ -72,6 +72,22 @@ describe('movingBallsReducer', () => {
         const state = {
             ...initialState, 
             circles: [{dx: -3, id: 0, y: 1}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
+
+    it("should update dy property in circles array with the opposite value", () => {
+        const action = { 
+            type: actionTypes.CHANGE_DIRECTION_OF_Y_MOVE,
+            id: 2
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{dy: 5, id: 0, y: 1},{dy: 2, id: 1, y: 1},{dy: -7, id: 2, y: 1}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{dy: 5, id: 0, y: 1},{dy: 2, id: 1, y: 1},{dy: 7, id: 2, y: 1}]
         }
         expect(reducer(initState, action)).toEqual(state);
     });
