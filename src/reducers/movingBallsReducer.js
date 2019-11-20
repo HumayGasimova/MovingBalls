@@ -48,8 +48,10 @@ const moveCircleYCoordinate = (state, action) => {
 const changeDirectionOfXMove = (state, action) => {
     let updatedCircles = [...state.circles];
     let circle = updatedCircles.find(x => x.id === action.id);
+    console.log(circle)
     circle.dx = -circle.dx;
     updatedCircles.splice(action.id, 1 ,circle);
+    console.log(updatedCircles)
     return updateObject(state, {
         circles: updatedCircles
     });

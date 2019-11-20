@@ -26,36 +26,36 @@ describe('movingBallsReducer', () => {
         expect(reducer(undefined, action)).toEqual(initialState);
     })
 
-    // it("should update property x in circles array by adding the value passed through the action", () => {
-    //     const action = { 
-    //         type: actionTypes.MOVE_CIRCLE_X_COORDINATE,
-    //         dx: 4,
-    //         id: 3
-    //     }
-    //     const initState = {
-    //         ...initialState, 
-    //         circles: [{dx: 4, id: 3, x: 1}]
-    //     }
-    //     const state = {
-    //         ...initialState, 
-    //         circles: [{dx: 4, id: 3, x: 1}]
-    //     }
-    //     expect(reducer(initState, action)).toEqual(state);
-    // });
+    it("should update property x in circles array by adding the value passed through the action", () => {
+        const action = { 
+            type: actionTypes.MOVE_CIRCLE_X_COORDINATE,
+            dx: 4,
+            id: 0
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{dx: 4, id: 0, x: 1}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{dx: 4, id: 0, x: 5}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
 
     // it("should update property x in circles array by adding the value passed through the action", () => {
     //     const action = { 
     //         type: actionTypes.MOVE_CIRCLE_Y_COORDINATE,
-    //         dy: 3,
+    //         dy: -4,
     //         id: 1
     //     }
     //     const initState = {
     //         ...initialState, 
-    //         circles: [{dy: 3, id: 1, y: 1}]
+    //         circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 10},{dy: 5, id: 2, y: 1}]
     //     }
     //     const state = {
     //         ...initialState, 
-    //         circles: [{dy: 3, id: 1, y: 4}]
+    //         circles: [{dy: 4, id: 0, y: 2},{dy: -4, id: 1, y: 6},{dy: 5, id: 2, y: 1}]
     //     }
     //     expect(reducer(initState, action)).toEqual(state);
     // });
