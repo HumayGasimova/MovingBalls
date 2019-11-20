@@ -60,21 +60,21 @@ describe('movingBallsReducer', () => {
         expect(reducer(initState, action)).toEqual(state);
     });
 
-    // it("should update numberOfBalls with the value passed through the action", () => {
-    //     const action = { 
-    //         type: actionTypes.CHANGE_DIRECTION_OF_X_MOVE,
-    //         id: 2
-    //     }
-    //     const initState = {
-    //         ...initialState, 
-    //         circles: [{dx: 3, id: 2, y: 1}]
-    //     }
-    //     const state = {
-    //         ...initialState, 
-    //         circles: [{dx: -3, id: 2, y: 1}]
-    //     }
-    //     expect(reducer(initState, action)).toEqual(state);
-    // });
+    it("should update numberOfBalls with the value passed through the action", () => {
+        const action = { 
+            type: actionTypes.CHANGE_DIRECTION_OF_X_MOVE,
+            id: 0
+        }
+        const initState = {
+            ...initialState, 
+            circles: [{dx: 3, id: 0, y: 1}]
+        }
+        const state = {
+            ...initialState, 
+            circles: [{dx: -3, id: 0, y: 1}]
+        }
+        expect(reducer(initState, action)).toEqual(state);
+    });
 
     it("should update circles array with the array passed through the action", () => {
         const action = { 
