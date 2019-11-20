@@ -3,8 +3,7 @@
 */
 
 import { 
-    of,
-    interval
+    of
 } from 'rxjs';
 
 import { 
@@ -49,7 +48,6 @@ export const fillCirclesArrayEpic = (action$, state$) =>
                         color: `rgba(${Utility.getRandomColor()}, ${Utility.getRandomColor()}, ${Utility.getRandomColor()}, ${Utility.getRandomAlfa()})`
                     }
                 })
-                console.log("RANDOM", arrayOfCircles)
                 return of(
                     Actions.updateCirclesArray(arrayOfCircles)
                 )

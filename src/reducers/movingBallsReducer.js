@@ -4,10 +4,6 @@
 
 import * as actionTypes from "../constants/actionTypes";
 
-/**
-* Constants
-*/
-
 import {
     updateObject
 } from './utility';
@@ -27,7 +23,6 @@ const moveCircleXCoordinate = (state, action) => {
     let selectedCircle = {...circle};
     selectedCircle.x = selectedCircle.x + action.dx;
     updatedCircles.splice(action.id, 1 ,selectedCircle);
-    // updatedCircles[action.id] = circle
     return updateObject(state, {
         circles: updatedCircles
     });
@@ -39,7 +34,6 @@ const moveCircleYCoordinate = (state, action) => {
     let selectedCircle = {...circle};
     selectedCircle.y = selectedCircle.y + action.dy;
     updatedCircles.splice(action.id, 1 ,selectedCircle);
-    // console.log(updatedCircles)
     return updateObject(state, {
         circles: updatedCircles
     });
@@ -48,10 +42,8 @@ const moveCircleYCoordinate = (state, action) => {
 const changeDirectionOfXMove = (state, action) => {
     let updatedCircles = [...state.circles];
     let circle = updatedCircles.find(x => x.id === action.id);
-    console.log(circle)
     circle.dx = -circle.dx;
     updatedCircles.splice(action.id, 1 ,circle);
-    console.log(updatedCircles)
     return updateObject(state, {
         circles: updatedCircles
     });
@@ -62,6 +54,7 @@ const changeDirectionOfYMove = (state, action) => {
     let circle = updatedCircles.find(x => x.id === action.id);
     circle.dy = -circle.dy;
     updatedCircles.splice(action.id, 1 ,circle);
+    console.log("updatedCircles", updatedCircles)
     return updateObject(state, {
         circles: updatedCircles
     });

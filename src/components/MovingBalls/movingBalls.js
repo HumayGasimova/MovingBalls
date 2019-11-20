@@ -48,10 +48,8 @@ import * as Utility from '../../utility';
  * MovingBalls component definition and export
  */
 
-
 export class MovingBalls extends Component {
 
-    
     /**
     * Methods
     */
@@ -112,7 +110,7 @@ export class MovingBalls extends Component {
                         disabled={isNaN(this.props.numberOfBalls)}
                     />
                 </div>
-                <canvas width={window.innerWidth - 35} height={window.innerHeight} style={{border: "2px solid black"}} ref="canvas" ></canvas>
+                <canvas width={window.innerWidth - 35} height={window.innerHeight} style={{border: "2px solid rgb(83, 83, 83)"}} ref="canvas" ></canvas>
             </div>
         );
     }
@@ -132,7 +130,7 @@ export default connect(
             changeDirectionOfXMove: bindActionCreators(Actions.changeDirectionOfXMove, dispatch),
             changeDirectionOfYMove: bindActionCreators(Actions.changeDirectionOfYMove, dispatch),
             fillCirclesArray: bindActionCreators(Actions.fillCirclesArray, dispatch),
-            getNumbersOfBalls: bindActionCreators(Actions.getNumbersOfBalls, dispatch),
+            getNumbersOfBalls: bindActionCreators(Actions.getNumbersOfBalls, dispatch)
         };
     }
 )(MovingBalls);

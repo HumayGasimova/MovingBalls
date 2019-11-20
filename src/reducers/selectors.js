@@ -13,5 +13,3 @@ export const getNumberOfBallsState = createSelector(
     [getNumberOfBalls],
     (x) => x
 );
-
-

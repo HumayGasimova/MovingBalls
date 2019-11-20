@@ -123,5 +123,4 @@ describe('movingBallsReducer', () => {
         }
         expect(reducer(initState, action)).toEqual(state);
     });
-
 });

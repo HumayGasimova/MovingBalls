@@ -22,7 +22,6 @@ import MovingBalls from './components/MovingBalls/movingBalls';
 
 import './app.scss';
 
-
 /**
 * App component definition and export
 */

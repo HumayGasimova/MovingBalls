@@ -7,4 +7,3 @@ export {
     updateCirclesArray,
     getNumbersOfBalls
 } from './movingBallsActions';
-
